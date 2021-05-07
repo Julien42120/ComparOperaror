@@ -1,0 +1,706 @@
+@charset "UTF-8";
+body {
+  font-family: "Pangolin", cursive;
+  background: linear-gradient(white, black);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.Nav .navbar {
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.507);
+}
+
+.Acceuil {
+  position: relative;
+}
+.Acceuil .carousel {
+  margin-top: 0;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+.Acceuil .carousel .carousel-item {
+  height: 100%;
+  margin-top: -5%;
+}
+.Acceuil .main {
+  width: 99vw;
+  margin-left: 50%;
+  margin-top: -25%;
+  z-index: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.Acceuil .main .main-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+.Acceuil .main .main-heading-primary {
+  display: block;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 15px;
+  animation: moveInLeft 1s ease-out;
+}
+.Acceuil .main .main-heading-secondary {
+  font-family: sans-serif;
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 10px;
+  color: black;
+  animation: moveInRight 1s ease-out;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.Acceuil .Cards {
+  margin-top: 5%;
+}
+.Acceuil .Cards .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 5%;
+  width: 55vw;
+  height: 45vh;
+}
+.Acceuil .Cards .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+  border-radius: 30px;
+}
+.Acceuil .Cards .container:hover .overlay {
+  display: block;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.Acceuil .Cards img {
+  border-radius: 30px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.Acceuil .Cards h1 {
+  position: absolute;
+  margin-left: 10%;
+  top: 40%;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top 0.5s ease;
+}
+.Acceuil .Cards .title {
+  position: absolute;
+  margin-left: 10%;
+  top: 50%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  transition: top 0.5s ease;
+}
+.Acceuil .Cards .container:hover .title {
+  top: 90px;
+}
+.Acceuil .Cards .container:hover h1 {
+  top: 60px;
+}
+.Acceuil .Cards .button {
+  position: absolute;
+  width: 20%;
+  left: 10%;
+  top: 65%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.Acceuil .Cards .button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+.Acceuil .Cards .container:hover .button {
+  opacity: 1;
+}
+.Acceuil .listDestinations {
+  width: 40%;
+  height: 40%;
+  background-color: rgba(71, 114, 194, 0.363);
+  text-align: center;
+  margin-left: 30%;
+  border-radius: 10%;
+}
+.Acceuil .listDestinations h2 {
+  margin-top: 3%;
+  color: white;
+  margin-bottom: 5%;
+  font-size: 3rem;
+  font-weight: 400;
+  background-attachment: scroll;
+}
+
+.Inscription {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(https://cdn.futura-sciences.com/buildsv6/images/wide1920/1/6/a/16ab689d14_111716_sable-plage.jpg);
+  background-size: cover;
+}
+.Inscription h1 {
+  margin-top: 10%;
+  color: white;
+  margin-bottom: 5%;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.Inscription label {
+  margin-bottom: 5%;
+  color: white;
+  font-size: 1.5rem;
+}
+.Inscription input {
+  margin-bottom: 5%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #56BAC5;
+}
+.Inscription input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.Inscription button {
+  margin-bottom: 10%;
+  width: 25%;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10%;
+  color: white;
+}
+.Inscription .AdminIns {
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 15%;
+  height: 50%;
+  width: 25%;
+  margin-left: 10%;
+  text-align: center;
+  margin-top: 15%;
+  margin-right: 10%;
+}
+.Inscription .AdminCo {
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 15%;
+  height: 50%;
+  width: 25%;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.AjoutTourOp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(https://images3.alphacoders.com/105/thumb-1920-105487.jpg);
+  background-size: cover;
+}
+.AjoutTourOp .formAddTour {
+  margin-top: 7%;
+  text-align: center;
+  height: 75%;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 15%;
+}
+.AjoutTourOp .formAddTour h2 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.AjoutTourOp .formAddTour label {
+  margin-bottom: 2%;
+  color: white;
+  font-size: 1.5rem;
+}
+.AjoutTourOp .formAddTour input {
+  margin-bottom: 5%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #56BAC5;
+}
+.AjoutTourOp .formAddTour input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.AjoutTourOp .formAddTour .file {
+  color: white;
+}
+.AjoutTourOp .formAddTour .file::placeholder {
+  color: white;
+}
+.AjoutTourOp .formAddTour button {
+  margin-bottom: 10%;
+  width: 25%;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10%;
+  color: white;
+}
+
+.VideoListOpérator {
+  width: 99vw;
+  height: 100vh;
+}
+.VideoListOpérator video {
+  width: 100%;
+  position: fixed;
+}
+.VideoListOpérator .ListTourOp {
+  width: 99vw;
+  height: 50vh;
+  background-attachment: fixed;
+}
+.VideoListOpérator .ListTourOp .divVide {
+  width: 100%;
+  height: 10%;
+}
+.VideoListOpérator .ListTourOp .title {
+  width: 55%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+.VideoListOpérator .ListTourOp .cardOp {
+  width: 50vw;
+  height: 20vw;
+  background-color: rgba(0, 0, 0, 0.466);
+  font-family: "Oswald", sans-serif;
+  border-radius: 30px;
+  padding: 5vw;
+  transform: scale(1);
+  transition-duration: 500ms;
+}
+.VideoListOpérator .ListTourOp .cardOp h2 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: -10%;
+  font-family: "Dancing Script", cursive;
+}
+.VideoListOpérator .ListTourOp .cardOp h3 {
+  color: white;
+  margin-top: 10%;
+  font-size: 1rem;
+}
+.VideoListOpérator .ListTourOp .cardOp .Link {
+  font-size: 1rem;
+  color: white;
+}
+.VideoListOpérator .ListTourOp .cardOp p {
+  font-size: 1rem;
+  color: white;
+}
+.VideoListOpérator .ListTourOp .cardOp .col-sm-4 {
+  text-align: center;
+}
+.VideoListOpérator .ListTourOp .cardOp button {
+  margin-left: 5%;
+  margin-top: 3%;
+  background-color: transparent;
+  border-radius: 30%;
+  border: none;
+  margin-right: 4%;
+  height: 4vw;
+  font-size: 1rem;
+  color: white;
+  transition-duration: 500ms;
+}
+.VideoListOpérator .ListTourOp .cardOp button a {
+  text-decoration: none;
+  color: white;
+}
+.VideoListOpérator .ListTourOp .cardOp button:hover {
+  background-color: green;
+}
+.VideoListOpérator .ListTourOp .cardOp .SupOp:hover {
+  background-color: red;
+}
+.VideoListOpérator .ListTourOp .cardOp .ModifOp:hover {
+  background-color: orange;
+}
+.VideoListOpérator .ListTourOp .cardOp:hover {
+  transform: scale(1.1);
+}
+
+.getlogo img {
+  width: 15vw;
+  margin-top: 10%;
+}
+
+.createDestination {
+  width: 99vw;
+  height: 100vh;
+  background-image: url(https://images6.alphacoders.com/526/thumb-1920-526622.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.createDestination .CreateDest {
+  width: 20%;
+  height: 55%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 15%;
+  margin-top: 15%;
+}
+.createDestination .CreateDest h2 {
+  margin-top: 10%;
+  color: white;
+  margin-bottom: 5%;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.createDestination .CreateDest label {
+  margin-bottom: 5%;
+  color: white;
+  font-size: 1.5rem;
+}
+.createDestination .CreateDest input {
+  margin-bottom: 5%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #56BAC5;
+}
+.createDestination .CreateDest input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.createDestination .CreateDest button {
+  margin-bottom: 10%;
+  width: 25%;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10%;
+  color: white;
+}
+
+.Index2 {
+  width: 99vw;
+  height: 100vh;
+  background-image: url(https://vistapointe.net/images/tropical-5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Index2 .title {
+  text-align: center;
+  width: 40%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.486);
+}
+.Index2 .title h1 {
+  margin-top: 20%;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+.Index2 .title h2 {
+  margin-top: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.Index2 .title h4 {
+  margin-top: 10%;
+  font-size: 1.5rem;
+  color: white;
+}
+.Index2 .title img {
+  width: 5vw;
+}
+
+.Modify {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://www.teahub.io/photos/full/2-27431_1920x1080-tropical-wallpapers-tropical-hd-background.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Modify .formModify {
+  text-align: center;
+  width: 25%;
+  height: 80%;
+  background-color: #00000075;
+  border-radius: 15%;
+  margin-top: 5%;
+}
+.Modify .formModify h2 {
+  margin-top: 10%;
+  color: white;
+  margin-bottom: 5%;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.Modify .formModify label {
+  margin-bottom: 5%;
+  color: white;
+  font-size: 1.5rem;
+}
+.Modify .formModify input {
+  margin-bottom: 5%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #56BAC5;
+}
+.Modify .formModify input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.Modify .formModify button {
+  margin-bottom: 10%;
+  width: 25%;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 10%;
+  color: white;
+}
+
+.detail_operator {
+  background-image: url(https://www.australietours.com/wp-content/uploads/2016/07/7-Queensland-Lizard-Island-Plage-hd.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+.detail_operator .content {
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 12%;
+}
+.detail_operator .content .affichage_to {
+  width: 50%;
+  color: white;
+}
+.detail_operator .content .destination {
+  font-family: "Oswald", sans-serif;
+  border-radius: 10px;
+  margin-right: 10%;
+}
+.detail_operator .content img {
+  border-radius: 10px;
+  width: 90%;
+  height: 30vh;
+  left: 0;
+}
+.detail_operator .content .affichage_to {
+  padding-left: 10%;
+}
+.detail_operator .content .operator_description {
+  background-color: rgba(0, 0, 0, 0.466);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.detail_operator .content .link {
+  text-decoration: none;
+  color: white;
+}
+.detail_operator .content .link:hover {
+  text-decoration: none;
+  color: aqua;
+}
+.detail_operator .content .destination_description {
+  position: relative;
+  top: -7rem;
+  margin-left: 5%;
+}
+.detail_operator .content .affichage_review {
+  width: 50%;
+  color: white;
+  padding-left: 10%;
+}
+.detail_operator .content .review {
+  background-color: rgba(0, 0, 0, 0.466);
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+  margin-top: 2%;
+}
+.detail_operator .content .form_review {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.466);
+  border-radius: 20px;
+  padding: 10px;
+}
+.detail_operator .content .form_review input {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.detail_operator .content .form_review textarea {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  height: 2vh;
+}
+.detail_operator .content .form_review select {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.detail_operator .content .form_review option {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+}
+.detail_operator .content .form_review button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-color: white;
+}
+.detail_operator .content .form_review button:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.Footer {
+  width: 100%;
+  height: 20vh;
+  background-color: #000000;
+}
+.Footer .social_links {
+  padding: 1rem;
+  background: #000000;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Footer .social_links .combo {
+  transform: scale(0.9);
+  transition: 0.4s ease-in;
+  margin: 0 0.5rem;
+  height: 3em;
+  width: 3em;
+  line-height: 3em;
+}
+.Footer .combo .circle {
+  color: #f9f9f9;
+  transition: 0.4s ease-in;
+  font-size: 3em;
+}
+.Footer .combo .icon {
+  color: #434444;
+  font-size: 2rem;
+  transform: translateY(1px);
+  transition: 0.2s ease-in;
+}
+.Footer .combo:hover {
+  transform: scale(1.1);
+}
+.Footer .combo:hover, .Footer .combo:hover .icon {
+  color: white;
+}
+.Footer .ig:hover, .Footer .ig:hover .circle {
+  color: #e91e63;
+}
+.Footer .fb:hover, .Footer .fb:hover .circle {
+  color: #2196f3;
+}
+.Footer .yt:hover, .Footer .yt:hover .circle {
+  color: #f44336;
+}
+.Footer .tw:hover, .Footer .tw:hover .circle {
+  color: #2196f3;
+}
+.Footer .gt:hover, .Footer .gt:hover .circle {
+  color: #1f1f1f;
+}
+.Footer .mention {
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+}
+.Footer .mention h1 {
+  padding-top: 2%;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 0.7rem;
+}
+.Footer .mention p {
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=custom.css.map */
