@@ -14,13 +14,13 @@ $destinationManager = new DestinationManager($pdo);
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <video playsinline autoplay muted loop> <source src="asset/Free Footage - 33871.mp4" type="video/mp4" class="d-block w-100" ></video>
+                    <video playsinline autoplay muted loop> <source src="asset/Free Footage - 33871.mp4" type="video/mp4"></video>
                 </div>
                 <div class="carousel-item">
-                <video playsinline autoplay muted loop> <source src="asset/Harbor - 6119.mp4" type="video/mp4" class="d-block w-100" ></video>
+                <video playsinline autoplay muted loop> <source src="asset/Harbor - 6119.mp4" type="video/mp4"></video>
                 </div>
                 <div class="carousel-item">
-                <video playsinline autoplay muted loop> <source src="asset/Mountains - 7418.mp4" type="video/mp4" class="d-block w-100" ></video>
+                <video playsinline autoplay muted loop> <source src="asset/Mountains - 7418.mp4" type="video/mp4"></video>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button"             data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -37,12 +37,13 @@ $destinationManager = new DestinationManager($pdo);
     <div class="main">
         <h1 class="main-heading">
             <span class="main-heading-primary">Intense Travel</span>
-            <span class="main-heading-secondary">L'agence qui vous fait monter au ciel</span>
+            <span class="main-heading-secondary">L'agence qui vous fait monter au ciel </span>
+            
         </h1>
     </div>
 
-    <div class="Cards">
-        <div class="listDestinations">
+    <div class="Cards" id="listDestinations">
+        <div class="listDestinations" >
             <h2>Listes des Destinations</h2>
         </div>
         <?php

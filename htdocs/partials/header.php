@@ -58,10 +58,10 @@
         <?php } ?>
 
 
-        <form action="" class="d-flex" method="POST">
+        <!-- <form action="" class="d-flex" method="POST">
           <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Rechercher</button>
-        </form>
+        </form> -->
 
         <?php
         if (isset($_POST['search'])){

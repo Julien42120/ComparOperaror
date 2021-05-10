@@ -23,8 +23,9 @@ body {
   position: relative;
 }
 .Acceuil .carousel {
+  width: 99vw;
   margin-top: 0;
-  height: 100vh;
+  max-height: 100vh;
   position: relative;
   z-index: 0;
 }
@@ -35,9 +36,9 @@ body {
 .Acceuil .main {
   width: 99vw;
   margin-left: 50%;
-  margin-top: -25%;
+  margin-top: -50vh;
   z-index: 0;
-  position: absolute;
+  position: relative;
   transform: translate(-50%, -50%);
 }
 .Acceuil .main .main-heading {
@@ -92,7 +93,7 @@ body {
   }
 }
 .Acceuil .Cards {
-  margin-top: 5%;
+  margin-top: 50vh;
 }
 .Acceuil .Cards .container {
   display: flex;
@@ -176,12 +177,12 @@ body {
   opacity: 1;
 }
 .Acceuil .listDestinations {
-  width: 40%;
-  height: 40%;
+  width: 40vw;
+  height: 6vh;
   background-color: rgba(71, 114, 194, 0.363);
   text-align: center;
   margin-left: 30%;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 .Acceuil .listDestinations h2 {
   margin-top: 3%;
@@ -307,23 +308,25 @@ body {
 }
 
 .VideoListOpérator {
-  width: 99vw;
   height: 100vh;
-}
-.VideoListOpérator video {
-  width: 100%;
   position: fixed;
 }
-.VideoListOpérator .ListTourOp {
+.VideoListOpérator video {
+  z-index: 0;
+  position: fixed;
+}
+
+.ListTourOp {
+  z-index: 1;
   width: 99vw;
   height: 50vh;
   background-attachment: fixed;
 }
-.VideoListOpérator .ListTourOp .divVide {
+.ListTourOp .divVide {
   width: 100%;
   height: 10%;
 }
-.VideoListOpérator .ListTourOp .title {
+.ListTourOp .title {
   width: 55%;
   height: 35%;
   display: flex;
@@ -331,7 +334,7 @@ body {
   margin-left: 25%;
   margin-top: 10%;
 }
-.VideoListOpérator .ListTourOp .cardOp {
+.ListTourOp .cardOp {
   width: 50vw;
   height: 20vw;
   background-color: rgba(0, 0, 0, 0.466);
@@ -341,30 +344,30 @@ body {
   transform: scale(1);
   transition-duration: 500ms;
 }
-.VideoListOpérator .ListTourOp .cardOp h2 {
+.ListTourOp .cardOp h2 {
   color: white;
   font-size: 3rem;
   text-align: center;
   margin-top: -10%;
   font-family: "Dancing Script", cursive;
 }
-.VideoListOpérator .ListTourOp .cardOp h3 {
+.ListTourOp .cardOp h3 {
   color: white;
   margin-top: 10%;
   font-size: 1rem;
 }
-.VideoListOpérator .ListTourOp .cardOp .Link {
+.ListTourOp .cardOp .Link {
   font-size: 1rem;
   color: white;
 }
-.VideoListOpérator .ListTourOp .cardOp p {
+.ListTourOp .cardOp p {
   font-size: 1rem;
   color: white;
 }
-.VideoListOpérator .ListTourOp .cardOp .col-sm-4 {
+.ListTourOp .cardOp .col-sm-4 {
   text-align: center;
 }
-.VideoListOpérator .ListTourOp .cardOp button {
+.ListTourOp .cardOp button {
   margin-left: 5%;
   margin-top: 3%;
   background-color: transparent;
@@ -376,20 +379,20 @@ body {
   color: white;
   transition-duration: 500ms;
 }
-.VideoListOpérator .ListTourOp .cardOp button a {
+.ListTourOp .cardOp button a {
   text-decoration: none;
   color: white;
 }
-.VideoListOpérator .ListTourOp .cardOp button:hover {
+.ListTourOp .cardOp button:hover {
   background-color: green;
 }
-.VideoListOpérator .ListTourOp .cardOp .SupOp:hover {
+.ListTourOp .cardOp .SupOp:hover {
   background-color: red;
 }
-.VideoListOpérator .ListTourOp .cardOp .ModifOp:hover {
+.ListTourOp .cardOp .ModifOp:hover {
   background-color: orange;
 }
-.VideoListOpérator .ListTourOp .cardOp:hover {
+.ListTourOp .cardOp:hover {
   transform: scale(1.1);
 }
 

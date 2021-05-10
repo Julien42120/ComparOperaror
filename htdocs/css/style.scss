@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     z-index: 1;
+
     .navbar{
         align-items: center;
         z-index: 1;
@@ -25,8 +26,9 @@ body{
 .Acceuil{
     position: relative;
     .carousel{
+        width: 99vw;
         margin-top:0 ;
-        height: 100vh;
+        max-height: 100vh;
         position: relative;
         z-index: 0;
         .carousel-item{
@@ -38,26 +40,25 @@ body{
     .main{
         width: 99vw;
         margin-left: 50%;
-        margin-top: -25%;
+        margin-top: -50vh;
         z-index: 0;
-        position:absolute;
+        position:relative;
         transform: translate(-50%, -50%);
         @import 'title.scss';
     }
 
     .Cards{
-        margin-top: 5%;
-        @import 'cardsDestination.scss';
-        
+        margin-top: 50vh;
+        @import 'cardsDestination.scss';  
     }
 
     .listDestinations{
-        width: 40%;
-        height: 40%;
+        width: 40vw;
+        height: 6vh;
         background-color: rgba(71, 114, 194, 0.363);
         text-align: center;
         margin-left: 30%;
-        border-radius: 10%;
+        border-radius: 10px;
         
         h2{
             margin-top:3%;
@@ -209,16 +210,16 @@ body{
 
 
 .VideoListOpérator{
-    width: 99vw;
     height: 100vh;
+    position: fixed;
 
-        video{
-            width: 100%;
-            
-            position: fixed;
-        }
-
+    video{
+        z-index: 0;
+        position: fixed;
+    }
+}
         .ListTourOp{
+            z-index: 1;
             width: 99vw;
             height: 50vh;
             background-attachment: fixed;
@@ -310,8 +311,6 @@ body{
             
         }
     }
-}
-
 
 
 .getlogo{
