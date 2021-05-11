@@ -23,25 +23,28 @@ body {
   position: relative;
 }
 .Acceuil .carousel {
-  width: 99vw;
-  margin-top: 0;
-  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
   position: relative;
-  z-index: 0;
+}
+.Acceuil .carousel .carousel-inner {
+  height: 100vh;
 }
 .Acceuil .carousel .carousel-item {
-  height: 100%;
-  margin-top: -5%;
+  height: 100vh;
+  width: 100%;
 }
-.Acceuil .main {
-  width: 99vw;
-  margin-left: 50%;
-  margin-top: -50vh;
+.Acceuil .carousel .main {
+  width: 100%;
+  white-space: nowrap;
   z-index: 0;
-  position: relative;
+  top: 300px;
+  left: 50%;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
-.Acceuil .main .main-heading {
+.Acceuil .carousel .main .main-heading {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -49,14 +52,14 @@ body {
   color: white;
   text-transform: uppercase;
 }
-.Acceuil .main .main-heading-primary {
+.Acceuil .carousel .main .main-heading-primary {
   display: block;
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: 15px;
   animation: moveInLeft 1s ease-out;
 }
-.Acceuil .main .main-heading-secondary {
+.Acceuil .carousel .main .main-heading-secondary {
   font-family: sans-serif;
   display: block;
   font-size: 2rem;
@@ -93,7 +96,7 @@ body {
   }
 }
 .Acceuil .Cards {
-  margin-top: 50vh;
+  margin-top: 10%;
 }
 .Acceuil .Cards .container {
   display: flex;
@@ -101,7 +104,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
-  margin-top: 5%;
+  margin-top: 5vh;
   width: 55vw;
   height: 45vh;
 }
@@ -166,8 +169,7 @@ body {
   transition: opacity 0.35s ease;
 }
 .Acceuil .Cards .button a {
-  width: 200px;
-  padding: 12px 48px;
+  width: 20vw;
   text-align: center;
   color: white;
   border: solid 2px white;
@@ -176,13 +178,17 @@ body {
 .Acceuil .Cards .container:hover .button {
   opacity: 1;
 }
+.Acceuil .divObscur {
+  display: flex;
+  justify-content: center;
+}
 .Acceuil .listDestinations {
-  width: 40vw;
-  height: 6vh;
+  align-content: center;
+  width: 400px;
+  height: 150px;
   background-color: rgba(71, 114, 194, 0.363);
   text-align: center;
-  margin-left: 30%;
-  border-radius: 10px;
+  border-radius: 10%;
 }
 .Acceuil .listDestinations h2 {
   margin-top: 3%;
@@ -201,43 +207,46 @@ body {
   justify-content: center;
   background-image: url(https://cdn.futura-sciences.com/buildsv6/images/wide1920/1/6/a/16ab689d14_111716_sable-plage.jpg);
   background-size: cover;
+  background-position: center;
 }
 .Inscription h1 {
-  margin-top: 10%;
+  margin-top: 10px;
   color: white;
   margin-bottom: 5%;
   font-weight: bold;
   font-size: 3rem;
 }
 .Inscription label {
-  margin-bottom: 5%;
+  margin-bottom: 30px;
   color: white;
   font-size: 1.5rem;
 }
 .Inscription input {
-  margin-bottom: 5%;
+  margin-bottom: 50px;
   background: transparent;
   border: none;
   border-bottom: 2px solid #56BAC5;
+  width: 20vw;
 }
 .Inscription input::placeholder {
   color: white;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .Inscription button {
   margin-bottom: 10%;
-  width: 25%;
-  height: 5vh;
+  width: 100px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.432);
   border-radius: 10%;
   color: white;
+  font-size: 1rem;
 }
 .Inscription .AdminIns {
   background-color: rgba(0, 0, 0, 0.295);
   border-radius: 15%;
-  height: 50%;
-  width: 25%;
+  height: 500px;
+  width: 500px;
   margin-left: 10%;
   text-align: center;
   margin-top: 15%;
@@ -246,28 +255,30 @@ body {
 .Inscription .AdminCo {
   background-color: rgba(0, 0, 0, 0.295);
   border-radius: 15%;
-  height: 50%;
-  width: 25%;
+  height: 500px;
+  width: 500px;
   text-align: center;
   margin-top: 15%;
 }
 
 .AjoutTourOp {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-image: url(https://images3.alphacoders.com/105/thumb-1920-105487.jpg);
   background-size: cover;
+  background-position: center;
 }
 .AjoutTourOp .formAddTour {
-  margin-top: 7%;
+  margin-top: 10%;
   text-align: center;
-  height: 75%;
-  width: 25%;
+  height: 700px;
+  width: 350px;
   background-color: rgba(0, 0, 0, 0.295);
   border-radius: 15%;
+  margin-bottom: 10%;
 }
 .AjoutTourOp .formAddTour h2 {
   margin-top: 10%;
@@ -317,6 +328,7 @@ body {
 }
 
 .ListTourOp {
+  margin-bottom: 100px;
   z-index: 1;
   width: 99vw;
   height: 50vh;
@@ -336,13 +348,15 @@ body {
 }
 .ListTourOp .cardOp {
   width: 50vw;
-  height: 20vw;
+  height: 400px;
   background-color: rgba(0, 0, 0, 0.466);
   font-family: "Oswald", sans-serif;
   border-radius: 30px;
   padding: 5vw;
   transform: scale(1);
   transition-duration: 500ms;
+  margin-top: 400px;
+  padding-bottom: 100px;
 }
 .ListTourOp .cardOp h2 {
   color: white;
@@ -406,13 +420,14 @@ body {
   height: 100vh;
   background-image: url(https://images6.alphacoders.com/526/thumb-1920-526622.jpg);
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .createDestination .CreateDest {
-  width: 20%;
-  height: 55%;
+  width: 400px;
+  height: 550px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.295);
   border-radius: 15%;
@@ -456,6 +471,7 @@ body {
   background-image: url(https://vistapointe.net/images/tropical-5.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -463,7 +479,8 @@ body {
 }
 .Index2 .title {
   text-align: center;
-  width: 40%;
+  width: 500px;
+  height: 700px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.486);
 }
@@ -496,11 +513,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-position: center;
 }
 .Modify .formModify {
   text-align: center;
-  width: 25%;
-  height: 80%;
+  width: 350px;
+  height: 800px;
   background-color: #00000075;
   border-radius: 15%;
   margin-top: 5%;
@@ -542,7 +560,11 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
   width: 100%;
 }
 .detail_operator .content {
@@ -551,10 +573,11 @@ body {
   padding-top: 12%;
 }
 .detail_operator .content .affichage_to {
-  width: 50%;
   color: white;
 }
 .detail_operator .content .destination {
+  min-width: 300px;
+  min-height: 150px;
   font-family: "Oswald", sans-serif;
   border-radius: 10px;
   margin-right: 10%;
@@ -591,7 +614,6 @@ body {
   margin-left: 5%;
 }
 .detail_operator .content .affichage_review {
-  width: 50%;
   color: white;
   padding-left: 10%;
 }

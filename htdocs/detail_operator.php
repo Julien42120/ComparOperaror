@@ -20,7 +20,7 @@ $allReviews = $reviewManager->getReviewByIdTo($operator->getId());
 <div class="detail_operator contenu">
     <div class="content">
         <div class="row">
-            <div class="col-sm-8 affichage_to">
+            <div class="col-12 col-md-6 affichage_to">
                 <div class="operator_description">
                     <div class="operator_title">
                         <h1><?= $operator->getName() ?></h1>
@@ -45,15 +45,15 @@ $allReviews = $reviewManager->getReviewByIdTo($operator->getId());
                             </div>
 
                             <a href="detail_operator.php?to=<?= $operator->getId() ?>"></a>
-                                                  
+                                                
                         </div> 
 
                     <?php } ?>
                     <br>
-                 
+                
             </div>
 
-            <div class="col-sm-4 affichage_review">
+            <div class="col-12 col-md-6 affichage_review">
                 <?php 
                 foreach ($allReviews as $review){
                 ?>
@@ -96,7 +96,7 @@ $allReviews = $reviewManager->getReviewByIdTo($operator->getId());
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
-            </div>
+            </div>    
         </div>
     </div>
 </div>
