@@ -9,19 +9,19 @@
   
   .main-heading-primary {
     display: block;
-    font-size: 5.0rem;
+    font-size: 5vw;
     font-weight: 600;
-    letter-spacing: 15px;
+    letter-spacing: 1.5vw;
     animation: moveInLeft 1s ease-out;
   }
   
   .main-heading-secondary {
     font-family: sans-serif;
     display: block;
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 600;
     text-align: center;
-    letter-spacing: 10px;
+    letter-spacing: 1vw;
     color: rgb(0, 0, 0);
     animation: moveInRight 1s ease-out;
   }

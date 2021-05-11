@@ -43,8 +43,10 @@ $destinationManager = new DestinationManager($pdo);
     </div>
 
     <div class="Cards" id="listDestinations">
-        <div class="listDestinations" >
-            <h2>Listes des Destinations</h2>
+        <div class="divObscur">
+            <div class="listDestinations" >
+                <h2>Listes des Destinations</h2>
+            </div>
         </div>
         <?php
         $allDestination = $destinationManager->getAllDestination();

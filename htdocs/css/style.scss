@@ -26,6 +26,7 @@ body{
 .Acceuil{
     position: relative;
     .carousel{
+        width: 100%;
         display: flex;
         justify-content: center;
         height: 100vh;
@@ -37,7 +38,10 @@ body{
             height: 100vh;
             width: 100%;
         }  
-        .main{
+        
+    }
+    
+    .main{
         width: 100%;
         white-space: nowrap;
         z-index: 0;
@@ -47,8 +51,6 @@ body{
         transform: translate(-50%, -50%);
         @import 'title.scss';
         } 
-    }
-
     
 
 
@@ -59,10 +61,8 @@ body{
     }
 
     .divObscur{
-
         display: flex;
         justify-content: center;
-
     }
 
     .listDestinations{

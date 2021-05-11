@@ -23,6 +23,7 @@ body {
   position: relative;
 }
 .Acceuil .carousel {
+  width: 100%;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -35,7 +36,7 @@ body {
   height: 100vh;
   width: 100%;
 }
-.Acceuil .carousel .main {
+.Acceuil .main {
   width: 100%;
   white-space: nowrap;
   z-index: 0;
@@ -44,7 +45,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
 }
-.Acceuil .carousel .main .main-heading {
+.Acceuil .main .main-heading {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,20 +53,20 @@ body {
   color: white;
   text-transform: uppercase;
 }
-.Acceuil .carousel .main .main-heading-primary {
+.Acceuil .main .main-heading-primary {
   display: block;
-  font-size: 5rem;
+  font-size: 5vw;
   font-weight: 600;
-  letter-spacing: 15px;
+  letter-spacing: 1.5vw;
   animation: moveInLeft 1s ease-out;
 }
-.Acceuil .carousel .main .main-heading-secondary {
+.Acceuil .main .main-heading-secondary {
   font-family: sans-serif;
   display: block;
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 600;
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 1vw;
   color: black;
   animation: moveInRight 1s ease-out;
 }
@@ -174,6 +175,7 @@ body {
   color: white;
   border: solid 2px white;
   z-index: 1;
+  white-space: nowrap;
 }
 .Acceuil .Cards .container:hover .button {
   opacity: 1;
